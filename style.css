@@ -1,0 +1,44 @@
+/* Estilos Gerais */
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Estilos para a seção "Produtos" */
+.produtos {
+  display: flex; /* Alterado para "flex" para alinhar os itens em uma linha */
+  justify-content: space-between; /* Adicionado para distribuir os itens uniformemente na linha */
+  flex-wrap: wrap; /* Adicionado para quebrar a linha quando o espaço for insuficiente */
+}
+
+.produto {
+  text-align: center;
+  flex-basis: calc(25% - 20px); /* Adicionado para definir a largura de cada item com base no número de itens por linha */
+  margin-bottom: 20px; /* Adicionado para espaçamento inferior entre os itens */
+}
+
+.produto img {
+  max-width: 100%; /* Alterado para "100%" para ajustar a largura dentro do contêiner */
+  height: auto;
+}
+
+.botao-adicionar {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+  justify-items: center;
+}
