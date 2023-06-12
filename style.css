@@ -15,7 +15,19 @@ body {
   display: flex; /* Alterado para "flex" para alinhar os itens em uma linha */
   justify-content: space-between; /* Adicionado para distribuir os itens uniformemente na linha */
   flex-wrap: wrap; /* Adicionado para quebrar a linha quando o espaço for insuficiente */
+  padding: 16px;
+  padding-bottom: 8px;
 }
+
+.sobre-loja__imagem {
+  padding-top: 36px;
+  padding-right: 8px;
+}
+
+.sobre-loja__texto {
+  padding-top: 36px;
+}
+
 
 .produto {
   text-align: center;
@@ -29,11 +41,15 @@ body {
 }
 
 .botao-adicionar {
-  background-color: #ff0000;
+  background-color: #00ff0d;
   color: #fff;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  border-radius: 32px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+
 }
 
 .container {
@@ -41,4 +57,64 @@ body {
   width: 100%;
   margin: 0 auto;
   justify-items: center;
+}
+
+/* Layout responsivo para a seção "sobre a loja" */
+#sobre-a-loja {
+  flex-direction: column;
+}
+
+#sobre-a-loja .container-flex {
+  flex-direction: column;
+  align-items: center;
+}
+
+#sobre-a-loja img {
+  margin-bottom: 16px;
+}
+
+/* Layout responsivo para a seção de produtos */
+.lista-veiculos li {
+  width: 100%;
+  padding: 16px;
+}
+
+/* Adicione as regras para o layout responsivo do menu aqui */
+
+@media screen and (min-width: 768px) {
+  /* Adicione as regras para telas maiores que 768px aqui */
+
+  /* Layout responsivo para a seção "sobre a loja" */
+  #sobre-a-loja {
+    flex-direction: row;
+  }
+
+  #sobre-a-loja .container-flex {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  #sobre-a-loja img {
+    margin-bottom: 0;
+    margin-right: 16px;
+  }
+
+  /* Layout responsivo para a seção de produtos */
+  .lista-veiculos li {
+    width: calc(50% - 16px);
+    margin-right: 16px;
+  }
+
+  .lista-veiculos .item-central {
+    margin-right: 0;
+  }
+}
+
+p {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+input {
+  justify-content: right;
 }
