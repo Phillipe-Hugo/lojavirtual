@@ -1,22 +1,20 @@
 /* Estilos Gerais */
-
 * {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Estilos para a seção "Produtos" */
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para a seção "Produtos" */
 .produtos {
-  display: flex; /* Alterado para "flex" para alinhar os itens em uma linha */
-  justify-content: space-between; /* Adicionado para distribuir os itens uniformemente na linha */
-  flex-wrap: wrap; /* Adicionado para quebrar a linha quando o espaço for insuficiente */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding: 16px;
-  padding-bottom: 8px;
 }
 
 .sobre-loja__imagem {
@@ -28,15 +26,14 @@ body {
   padding-top: 36px;
 }
 
-
 .produto {
   text-align: center;
-  flex-basis: calc(25% - 20px); /* Adicionado para definir a largura de cada item com base no número de itens por linha */
-  margin-bottom: 20px; /* Adicionado para espaçamento inferior entre os itens */
+  flex-basis: calc(50% - 20px); /* Alterado para 50% para exibir dois itens por linha */
+  margin-bottom: 20px;
 }
 
 .produto img {
-  max-width: 100%; /* Alterado para "100%" para ajustar a largura dentro do contêiner */
+  max-width: 100%;
   height: auto;
 }
 
@@ -49,7 +46,6 @@ body {
   border-radius: 32px;
   padding-bottom: 8px;
   padding-top: 8px;
-
 }
 
 .container {
@@ -81,40 +77,25 @@ body {
 
 /* Adicione as regras para o layout responsivo do menu aqui */
 
-@media screen and (min-width: 768px) {
-  /* Adicione as regras para telas maiores que 768px aqui */
+@media screen and (max-width: 767px) {
+  /* Adicione as regras para telas menores que 768px aqui */
 
   /* Layout responsivo para a seção "sobre a loja" */
-  #sobre-a-loja {
-    flex-direction: row;
+  .sobre-loja {
+    flex-direction: column;
   }
 
-  #sobre-a-loja .container-flex {
-    flex-direction: row;
-    align-items: flex-start;
+  .sobre-loja__imagem {
+    padding-top: 36px;
+    padding-right: 8px;
   }
 
-  #sobre-a-loja img {
-    margin-bottom: 0;
-    margin-right: 16px;
+  .sobre-loja__texto {
+    padding-top: 36px;
   }
 
   /* Layout responsivo para a seção de produtos */
-  .lista-veiculos li {
-    width: calc(50% - 16px);
-    margin-right: 16px;
+  .produto {
+    flex-basis: 100%;
   }
-
-  .lista-veiculos .item-central {
-    margin-right: 0;
-  }
-}
-
-p {
-  padding-top: 8px;
-  padding-bottom: 8px;
-}
-
-input {
-  justify-content: right;
 }
