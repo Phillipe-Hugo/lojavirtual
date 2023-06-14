@@ -28,7 +28,7 @@ body {
 
 .produto {
   text-align: center;
-  flex-basis: calc(50% - 20px); /* Alterado para 50% para exibir dois itens por linha */
+  flex-basis: calc(25% - 20px); /* Alterado para 25% para exibir quatro itens por linha */
   margin-bottom: 20px;
 }
 
@@ -57,12 +57,9 @@ body {
 
 /* Layout responsivo para a seção "sobre a loja" */
 #sobre-a-loja {
-  flex-direction: column;
-}
-
-#sobre-a-loja .container-flex {
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Adicionado display flex para criar duas colunas */
+  justify-content: space-between; /* Adicionado espaçamento entre as colunas */
+  align-items: center; /* Centralizar verticalmente */
 }
 
 #sobre-a-loja img {
@@ -81,8 +78,8 @@ body {
   /* Adicione as regras para telas menores que 768px aqui */
 
   /* Layout responsivo para a seção "sobre a loja" */
-  .sobre-loja {
-    flex-direction: column;
+  #sobre-a-loja {
+    flex-direction: column; /* Alterado para exibir as colunas uma abaixo da outra */
   }
 
   .sobre-loja__imagem {
